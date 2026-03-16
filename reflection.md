@@ -6,7 +6,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
-  (for example: "the secret number kept changing" or "the hints were backwards").
+  (for example: "the hints were backwards").
 
 I gave it 3 plays, it seems to consistantly give the incorrect hint (guess higher when its lower, aand lower when higher).  In one example the answer was a negative number.  The score in the developer log is different than the score given when I win the game AND the score is weird, like I lose an inconsistant amount of points for each guess, maybe it's based on how far off of the correct answer I was?  Something is also wrong with the attempt counter, I think im loseing an attempt but im not really sure how.  
 ---
@@ -32,9 +32,7 @@ Every bug that got fixed I tried to check with at least 3 games.  I didnt try to
 
 ## 4. What did you learn about Streamlit and state?
 
-- In your own words, explain why the secret number kept changing in the original app.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-- What change did you make that finally gave the game a stable secret number?
 
 Everytime I acted on the app, the streamlit returned the full app, so it could pick a new number every time.  I guess just imagine that the streamlit randomly draws a new number everytime, except for thje session_state which is the same.  I used the line: 
 if "secret" not in st.session_state:
